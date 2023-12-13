@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paint Web Application</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <h1>Paint Web Application</h1>
+    <div class="container">
+        <div id="pen-tools" class="pen-tools">
+            <div class="draw-main">
+                <h2>Select Color</h2>
+                <div id="drawing-colors" class="drawing-colors">
+                    <div class="color-circle active" data-color="black" onclick="selectColor(this)"></div>
+                    <div class="color-circle" data-color="orange" onclick="selectColor(this)"></div>
+                    <div class="color-circle" data-color="yellow" onclick="selectColor(this)"></div>
+                    <div class="color-circle" data-color="blue" onclick="selectColor(this)"></div>
+                    <div class="color-circle" data-color="violet" onclick="selectColor(this)"></div>
+                    <div class="color-circle" data-color="red" onclick="selectColor(this)"></div>
+                    <div class="color-circle" data-color="green" onclick="selectColor(this)"></div>
+                    <div class="color-circle" data-color="white" onclick="selectColor(this)"></div>
+                </div>
+            </div>
+
+            <div id="favContainer">
+                <label class="spacing" for="favcolor">Custom Color</label>
+                <input type="color" name="favColor" id="favColor" value="#00ff00" onchange="favColor(this)" />
+            </div>
+
+            <ul class="options">
+                <h2 class="optionh2">Options</h2>
+                <li class="option activeb" id="brush" onclick="changeactive(this)"><span>Brush</span></li>
+                <li class="option" id="eraser" onclick="changeactive(this)"><span>Eraser</span></li>
+                <input type="range" name="pen-size" value="3" min="3" max="30" id="size-slider" onchange="penSizeChange(this.value)" />
+            </ul>
+        </div>
+
+        <div class="board">
+            <canvas width="1000px" height="600px"></canvas>
+            <div class="download-clear">
+                <a href="" class="btn" download="my_painting.png">Download Image</a>
+                <button class="fa-refresh btn"><strong>Clear Canvas</strong></button>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

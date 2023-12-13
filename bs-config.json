@@ -1,0 +1,8 @@
+{
+  "server": {
+    "routes": {
+      "/static": "static"
+    }
+  },
+  "port": 80
+}

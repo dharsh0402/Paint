@@ -1,0 +1,23 @@
+{
+  "name": "simple-paint",
+  "version": "1.0.0",
+  "description": "Simple Paint Web Application",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server --port 80"
+  },
+  "author": "Your Name",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  },
+  "server": {
+    "baseDir": [
+      "./static",
+      "./templates"
+    ],
+    "routes": {
+      "/static": "static"
+    }
+  }
+}
